@@ -9,7 +9,7 @@
  */
 unsigned int pow_10(unsigned int num)
 {
-	unsigned int i, result;
+	unsigned int i, pow;
 
 	pow = 1;
 	for (i = 0; i < num; i++)
