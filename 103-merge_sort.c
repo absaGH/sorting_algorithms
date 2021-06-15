@@ -57,9 +57,9 @@ void SplitMerge(size_t start, size_t end, int *array, int *copy)
 	if (end - start < 2)
 		return;
 	middle = (start + end) / 2;
-	TDSplitMerge(start, middle, array, copy);
-	TDSplitMerge(middle, end, array, copy);
-	TDMerge(start, middle, end, array, copy);
+	SplitMerge(start, middle, array, copy);
+	SplitMerge(middle, end, array, copy);
+	Merge(start, middle, end, array, copy);
 	for (middle = start; middle < end; middle++)
 		copy[middle] = array[middle];
 }
